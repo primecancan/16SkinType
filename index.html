@@ -1,0 +1,72 @@
+<!doctype html>
+<!--[if lte IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- 告诉IE使用最新版的渲染引擎 -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>16SkinType</title>
+    <!-- 预留给描述站点用的： -->
+    <meta name="description" content="">
+    <!-- 针对移动浏览器的视口标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+</head>
+
+<body style="background: url(img/bg-grid.png) top center #fff;">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <main role="main" class="index-main">
+        <div class="container">
+            <div class="row">
+                <div class="index-intro col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+                    <canvas id="cats" width="772" height="535"></canvas>
+
+                    <p>寻找专属你的护肤方案：完美皮肤保养指南</p>
+                    <p>科学护肤从了解肌肤类型开始</p>
+                    <h6>The Skin Type Solution<i class="fa fa-leaf"></i>: a revolutionary guide to your best skin ever</h6>
+                    <div type="button" class="btn btn-lg example">举个栗子</div>
+                </div>
+                <div class="index-type col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+                    <div class="row" id="row-type">
+                         
+                        <textarea id="template" style="display: none;">
+                            <a href="$href$" class="col-xs-5 col-sm-3 type-info col-sm-offset-0 $classname1$ ">
+                                <h2>$h2$</h2>
+                                <h1>$h1$</h1>
+                                <h6>$h6$</h6>
+                                <div class="col-xs-5 type-intro $classname2$-type-intro">
+                                    <h4>$h4$</h4>
+                                    <h5>$h5$</h5>
+                                </div>
+                            </a>   
+                        </textarea>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer role="contentinfo">
+        <div class="all-footer">
+            <div id="start-arrow">
+                <a href="test.html" type="button" class="btn btn-lg">
+                    开始测试<i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

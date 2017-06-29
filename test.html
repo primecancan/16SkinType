@@ -1,0 +1,156 @@
+<!doctype html>
+<!--[if lte IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- 告诉IE使用最新版的渲染引擎 -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>test for skin type</title>
+    <!-- 预留给描述站点用的： -->
+    <meta name="description" content="">
+    <!-- 针对移动浏览器的视口标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header role="banner">
+        <nav class="navbar navbar-static-top navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><strong>16SkinType<i class="fa fa-leaf"></i></strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="test.html">重新测试</a></li>
+                        <li class="active"><a href="index.html">了解类型</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <div class="container bg-fff" id="test-body">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="ques-part" id="oily">
+                        <textarea id="template-oily" style="display: none;">
+                            <div class="test-num">
+                                <span>$num$<i class="fa fa-arrow-right fa-fw"></i></span>
+                            </div>
+                            <div class="col-xs-10">
+                                <p>$question$</p>
+                                <ul class="list-unstyled">
+                                    <li id="$quesId$a" value="$pointA$">
+                                        <a>
+                                            <span class="abcde">A</span> &nbsp;$optionA$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$b" value="$pointB$">
+                                        <a>
+                                            <span class="abcde">B</span> &nbsp;$optionB$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$c" value="$pointC$">
+                                        <a>
+                                            <span class="abcde">C</span> &nbsp;$optionC$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$d" value="$pointD$">
+                                        <a>
+                                            <span class="abcde">D</span> &nbsp;$optionD$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$e" value="$pointE$">
+                                        <a>
+                                            <span class="abcde">E</span> &nbsp;$optionE$
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+                    <div class="ques-part gone" id="sensitive">
+                        <textarea id="template-sensitive" style="display: none;">
+                            <div class="test-num">
+                                <span>$num$<i class="fa fa-arrow-right fa-fw"></i></span>
+                            </div>
+                            <div class="col-xs-10">
+                                <p>$question$</p>
+                                <ul class="list-unstyled">
+                                    <li id="$quesId$a" value="$pointA$">
+                                        <a>
+                                            <span class="abcde">A</span> &nbsp;$optionA$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$b" value="$pointB$">
+                                        <a>
+                                            <span class="abcde">B</span> &nbsp;$optionB$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$c" value="$pointC$">
+                                        <a>
+                                            <span class="abcde">C</span> &nbsp;$optionC$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$d" value="$pointD$">
+                                        <a>
+                                            <span class="abcde">D</span> &nbsp;$optionD$
+                                        </a>
+                                    </li>
+                                    <li id="$quesId$e" value="$pointE$">
+                                        <a>
+                                            <span class="abcde">E</span> &nbsp;$optionE$
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+                    <div class="ques-part" id="pigmented"></div>
+                    <div class="ques-part" id="tight"></div>
+                </div>
+            </div>
+        </div>
+        <div class="all-footer" id="nques">
+            <div id="footer-left">
+                <ul class="list-unstyled container ques-list" id="li-oily">
+                </ul>
+                <ul class="list-unstyled container ques-list gone" id="li-sensitive">
+            </div>
+            <div id="footer-right">
+                <button class="btn btn-lg gone" id="set-oily">
+                    <span>Next</span>
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-lg gone" id="set-sensitive">
+                    <span>Next</span>
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer role="contentinfo">
+    </footer>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
