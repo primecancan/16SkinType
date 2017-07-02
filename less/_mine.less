@@ -228,6 +228,7 @@ body {
             h1 {
                 font-size: @font-size-h2;
             }
+            min-height: 105px;
         }
     }
 }
@@ -895,4 +896,13 @@ body {
     background-image: linear-gradient(#F6F6F6 1.1px, transparent 1.1px), linear-gradient(90deg, #F6F6F6 1.1px, transparent 1.1px), linear-gradient(#F7F7F7 0.7px, transparent 0.7px), linear-gradient(90deg, #F7F7F7 0.7px, transparent 0.7px);
     background-size: 30px 30px, 30px 30px, 10px 10px, 10px 10px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+
+.hidden-max-xs {
+    @media screen {
+        @media(max-width: @screen-xs-min) {
+            display: none;
+        }
+    }
 }

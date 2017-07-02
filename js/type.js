@@ -44,13 +44,6 @@ var colorDRNT = [
     ["D", "R"]
 ];
 
-// window.requestAnimationFrame = (function() {
-//     return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-//         function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element) {
-//             return window.setTimeout(callback, 1000 / 60);
-//         };
-// })();
-
 function drawStriangle(context, x1, y1, x2, y2, x3, y3, color) {
 
     context.fillStyle = color;
@@ -228,30 +221,30 @@ function step5(context, color) {
 }
 // if (myCanvas.getContext) {
 
-    // var context = c.getContext("2d");
-    // step1(context,colorDSNT);
-    // step1(context, colorOSNT);
-    // step1(context,colorORNT);
-    // step1(context,colorDRNT);
+// var context = c.getContext("2d");
+// step1(context,colorDSNT);
+// step1(context, colorOSNT);
+// step1(context,colorORNT);
+// step1(context,colorDRNT);
 // }
 
 
-$(function(){
-    var tBefore = $(window).scrollTop(); 
-    $(window).scroll(function(){
+$(function() {
+    var tBefore = $(window).scrollTop();
+    $(window).scroll(function() {
         var tAfter = $(window).scrollTop();
-        if(tAfter-tBefore>3){
+        if (tAfter - tBefore > 3) {
             $("#navbar-down").removeClass("is-hidden").addClass("is-shown");
-        }else if (tBefore-tAfter>3){
+        } else if (tBefore - tAfter > 3) {
             $("#navbar-down").removeClass("is-shown").addClass("is-hidden");
         }
-        tBefore=tAfter;
+        tBefore = tAfter;
     })
 })
 
-document.onselectstart = function(){
+document.onselectstart = function() {
     return false;
 }
-document.oncopy = function(){
+document.oncopy = function() {
     return false;
 }

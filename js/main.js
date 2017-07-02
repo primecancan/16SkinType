@@ -24,7 +24,7 @@ var q = {
     oily: [{
         quesId: "ques100",
         num: "1",
-        question: "在洗完脸后，不要使用任何的保湿霜、防晒霜、柔肤水、粉或者其他产品。过2~3小时后，在明亮的灯光下照镜子，额头和脸颊会感觉或出现：",
+        question: "在洗完脸后先不要使用任何的保湿霜、防晒霜、柔肤水、粉或者其他产品，过2~3小时后，在明亮的灯光下照镜子，额头和脸颊会出现或感觉：",
         optionA: "粗糙、易脱皮、或肤色苍白",
         optionB: "皮肤紧绷",
         optionC: "皮肤很水润，在灯光下没有反射",
@@ -32,12 +32,12 @@ var q = {
     }, {
         quesId: "ques101",
         num: "2",
-        question: "拍照时，你的皮肤在照片看起来油光发亮",
+        question: "拍照时，照片上你的皮肤看起来油光发亮吗？",
         optionA: "从来没有，或者你从未注意",
     }, {
         quesId: "ques102",
         num: "3",
-        question: "使用粉底但不用遮盖粉后2~3小时，你的粉底会表现",
+        question: "使用粉底但不用遮盖粉，2~3小时后，你的粉底会表现",
         optionA: "在皱纹处起皮或层片状",
         optionB: "光滑",
         optionC: "有光泽",
@@ -93,7 +93,7 @@ var q = {
     }, {
         quesId: "ques109",
         num: "10",
-        question: "T区（额头和鼻子）会出油：",
+        question: "T区（额头和鼻子）会出油吗？",
     }, {
         quesId: "ques110",
         num: "11",
@@ -113,7 +113,7 @@ var q = {
     }, {
         quesId: "ques201",
         num: "2",
-        question: "护肤产品（包括洁面乳、保湿霜、柔肤水和化妆品）会使面部出现发红、发痒或刺痛？",
+        question: "护肤产品（包括洁面乳、保湿霜、柔肤水和化妆品）会使面部出现发红、发痒或刺痛吗？",
         optionE: "我不在脸上使用护肤品",
     }, {
         num: "3",
@@ -131,7 +131,7 @@ var q = {
     }, {
         num: "5",
         quesId: "ques204",
-        question: "使用发晒霜时，皮肤会出现发痒、刺痛、发红或出现皮疹？",
+        question: "使用防晒霜时，皮肤会出现发痒、刺痛、发红或出现皮疹？",
         optionE: "从不使用防晒霜",
     }, {
         num: "6",
@@ -174,7 +174,7 @@ var q = {
     }, {
         num: "11",
         quesId: "ques210",
-        question: "如果你的床单使用添加香料的洗涤剂清洗过，或经过防静电处理，你会感觉：",
+        question: "如果使用添加香料的洗涤剂清洗床单，或床单经过防静电处理，你会感觉：",
         optionA: "皮肤没有不适感",
         optionB: "皮肤感觉有点干",
         optionC: "会发痒",
@@ -365,6 +365,7 @@ $(document).ready(function() {
             $("#" + this.id).addClass("green");
             $("#n" + id).addClass("ok");
             setAnswer(id);
+            scrollToNext(id);
         }
     });
     $(".question").click(function() {
@@ -390,6 +391,18 @@ $(document).ready(function() {
                 submit("sensitive");
             }
         }
+    }
+
+    function scrollToNext(id) {
+        var i = id.slice(5, 7) - 0;
+        var category = id.slice(4, 5);
+        var h;
+        if (category == "1" && i != 11) {
+            h = $(".question")[i+1].offsetTop + 70 + p - half + $(".question")[i+1].offsetHeight * 0.5;
+        } else if (category == "2" && i != 18) {
+            h = $(".question")[i + 12].offsetTop + 70 + p - half + $(".question")[i + 12].offsetHeight * 0.5;
+        }
+        $("body,html").animate({ scrollTop: h + "px" }, 400);
     }
 
     var pointOily = 0;
