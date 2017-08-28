@@ -299,6 +299,12 @@ body {
     }
 }
 
+#row-type {
+    .col-xs-5 {
+        // border-radius:5%;
+    }
+}
+
 //针对ipad-pro还应该在改一改。
 .index-main {
     margin-top: 100px;
@@ -788,7 +794,6 @@ body {
         //     :nth-child(2n+1) {
         //         background-color: darken(@DSNT02, 5%);
         //     }
-            
         //     :nth-child(2n) {
         //         background-color: lighten(@DSNT02, 5%);
         //     }
@@ -802,7 +807,6 @@ body {
         //     :nth-child(2n+1) {
         //         background-color: darken(@OSNT06, 5%);
         //     }
-            
         //     :nth-child(2n) {
         //         background-color: lighten(@OSNT06, 5%);
         //     }
@@ -816,7 +820,6 @@ body {
         //     :nth-child(2n+1) {
         //         background-color: darken(@ORNT10, 5%);
         //     }
-            
         //     :nth-child(2n) {
         //         background-color: lighten(@ORNT10, 5%);
         //     }
@@ -826,15 +829,14 @@ body {
         i {
             color: darken(@DRNT14, 15%);
         }
-    //     ul:not(.is-li){
-    //         :nth-child(2n+1) {
-    //             background-color: darken(@DRNT14, 5%);
-    //         }
-            
-    //         :nth-child(2n) {
-    //             background-color: lighten(@DRNT14, 5%);
-    //         }
-    //     }
+        //     ul:not(.is-li){
+        //         :nth-child(2n+1) {
+        //             background-color: darken(@DRNT14, 5%);
+        //         }
+        //         :nth-child(2n) {
+        //             background-color: lighten(@DRNT14, 5%);
+        //         }
+        //     }
     }
 }
 
@@ -898,11 +900,43 @@ body {
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
-
 .hidden-max-xs {
     @media screen {
         @media(max-width: @screen-xs-min) {
             display: none;
+        }
+    }
+}
+
+.type-footer {
+    margin-bottom: -70px;
+    background-repeat: repeat-x;
+    height: 120px;
+    text-align: center;
+    opacity: 0.3;
+    -webkit-opacity: 0.3;
+    -moz-opacity: 0.3;
+    -o-opacity: 0.3;
+    &-ds {
+        background-image: url("../img/ds.png");
+    }
+    &-dr {
+        background-image: url("../img/dr.png");
+    }
+    &-os {
+        background-image: url("../img/os.png");
+    }
+    &-or {
+        background-image: url("../img/or.png");
+    }
+    p {
+        display: inline-block;
+        height: 120px;
+        line-height: 120px;
+        margin: 0, auto;
+        margin-bottom: 0px;
+        small {
+            background-color: rgba(255, 255, 255, 0.4);
         }
     }
 }
